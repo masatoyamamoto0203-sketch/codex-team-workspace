@@ -1,0 +1,56 @@
+/* V3.0.2: task colours are decorative; expiry and stock warnings retain their colours. */
+@media screen {
+  body {background:linear-gradient(135deg,#edf5ff 0%,#f5f1ff 48%,#eafaf5 100%);color:#20334d;min-height:100vh}
+  main > header {padding:26px;border-radius:22px;background:linear-gradient(115deg,#165aaf 0%,#5142a7 55%,#167d83 100%);box-shadow:0 10px 30px #294a7420;color:#fff}
+  main > header h1 {color:#fff;font-weight:800}
+  main > header > small {display:inline-block;padding:5px 12px;border-radius:20px;background:#ffffff20;color:#fff;font-weight:600}
+  main > header > p {color:#f0f5ff}
+  .backup-toolbar {background:#ffffff;border:1px solid #ffffff;border-radius:16px;color:#243755;box-shadow:0 4px 16px #162e5c18;margin-bottom:0}
+  .backup-toolbar button {background:linear-gradient(110deg,#5940b2,#8a3489);color:#fff;box-shadow:0 4px 10px #5940b22b}
+  main > header .backup-toolbar p {color:#3e526b}
+  main > header .backup-toolbar .error {color:#a02b25}
+  nav {gap:10px}
+  nav button {--task:#205eb0;--tint:#eaf2ff;background:var(--tint);color:var(--task);border:1px solid transparent;border-bottom:4px solid var(--task);border-radius:13px;padding:12px 18px;box-shadow:0 3px 8px #294a7410;transition:background .15s,box-shadow .15s}
+  nav button.active {background:var(--task);color:white;box-shadow:0 5px 12px #294a742b}
+  nav button:hover {border-color:var(--task);box-shadow:0 5px 12px #294a742b}
+  nav button[data-tab=stock],#stock {--task:#205eb0;--tint:#eaf2ff}
+  nav button[data-tab=move],#move {--task:#5541a4;--tint:#f0ecff}
+  nav button[data-tab=receive],#receive {--task:#087657;--tint:#e3f7ee}
+  nav button[data-tab=products],#products {--task:#8c337e;--tint:#fbeaf8}
+  nav button[data-tab=scan],#scan {--task:#146e87;--tint:#e6f6fd}
+  nav button[data-tab=jfs],#jfs {--task:#306834;--tint:#eaf5e8}
+  nav button[data-tab=audit],#audit {--task:#4853a1;--tint:#eef0ff}
+  nav button[data-tab=staff],#staff {--task:#7b3996;--tint:#f5eafa}
+  nav button[data-tab=locations],#locations {--task:#106d6c;--tint:#e2f6f4}
+  nav button[data-tab=units],#units {--task:#345f8b;--tint:#eaf3fb}
+  nav button[data-tab=plan],#plan {--task:#604eab;--tint:#f0edfc}
+  .pane {--task:#205eb0;--tint:#eaf2ff}
+  .pane > article,.pane > .grid > article {border:1px solid #dce5f2;border-top:5px solid var(--task);border-radius:18px;box-shadow:0 5px 20px #294a740c}
+  .pane h2 {color:var(--task)}
+  .pane form > button:not(.secondary):not(.danger) {background:var(--task);box-shadow:0 3px 9px #294a741a}
+  .pane .secondary {background:var(--tint);color:var(--task)}
+  .summary {background:linear-gradient(100deg,#e6f1ff,#e9f6fa);border:1px solid #c8ddf8;color:#234c79}
+  input:not([type=checkbox]),select,textarea {background:#fbfdff;border-color:#acbbd0}
+  input:focus-visible,select:focus-visible,textarea:focus-visible {outline:3px solid #7596e7;outline-offset:2px}
+  button:focus-visible,a:focus-visible {outline:3px solid #7596e7;outline-offset:3px}
+  #caseStockSummary .record {border:1px solid #d8e6f9;border-left:5px solid #4389c5;background:#f4f9ff;border-radius:12px;padding:14px;margin:10px 0}
+  #caseStockSummary h3 {color:#205eb0}
+  .calendar-panel {background:#f5f2ff;border-color:#d3c8ef}
+  .calendar-days button:not(.chosen) {background:#eee9fb;color:#513b87}
+  .calendar-days button.chosen {background:#6346ac;color:#fff}
+  main > section:not(.pane) {border-top:5px solid #397bc4;box-shadow:0 5px 18px #294a7412}
+  main > #detail {border-top-color:#128064}
+  #detail h2 {color:#087657}
+  #detail #save {background:linear-gradient(110deg,#087657,#13728a)}
+  .capture {background:linear-gradient(110deg,#2565b5,#574db3);box-shadow:0 5px 12px #294a7420}
+  #lookup button {background:#235da1}
+  @media (max-width:600px) {
+    main > header {padding:20px 16px;border-radius:18px}
+    main > header h1 {font-size:25px}
+    nav {gap:8px}
+    nav button {flex:1 1 140px;padding:10px 12px}
+    .backup-toolbar {padding:14px}
+    .backup-toolbar button {width:100%}
+  }
+  @media (prefers-reduced-motion:reduce) {nav button{transition:none}}
+}
